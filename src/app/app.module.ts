@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TrashComponent } from './trash/trash.component';
 import { SideNavigationComponent } from './side-navigation/side-navigation.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TrashComponent,
-    SideNavigationComponent
+    SideNavigationComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
