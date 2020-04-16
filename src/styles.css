@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+
+.content-wrap{
+    margin: 60px 0px 0px 100px;
+    padding: 30px;
+}
+
+input.search{
+    float: right;
+    margin: 10px 0px;
+}
+
+.product-card{
+    position: relative;
+    min-width: 19%;
+    word-wrap: break-word;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    max-width: 19%;
+    min-height: 250px;
+    margin: 5px;
+}
+
+.product-card img{
+    margin: 60px 0px;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.product-card span.header{
+    width: 100%;
+    position: absolute;
+    display: block;
+    border-bottom: gray 1px solid;
+    margin: 0 -15px;
+    padding: 15px;
+}
+.product-card span.footer{
+    width: 100%;
+    position: absolute;
+    display: block;
+    border-top: gray 1px solid;
+    margin: 0 -15px;
+    padding: 15px;
+    bottom: 0;
+}
+
+.no-items{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 200;
+}

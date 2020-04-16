@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col">
+        <h3 style="float: left;">Trash</h3>
+        <!-- <input class='search' type="text" placeholder="search"> -->
+    </div>
+</div>
+<div class="row">
+    <ng-container *ngFor="let product of products; let i = index;">
+        <div class="col product-card" *ngIf="product.isDeleted">
+            <span class='header'>{{product.title}}</span>
+            <img src="https://picsum.photos/id/1{{i}}/300/300" alt=''>
+            <span class='footer'>
+                <button (click)="restoreProduct(product.id)"> Restore </button>
+                <button (click)="removeProduct(product.id)"> Remove </button>
+            </span>
+        </div>
+    </ng-container>
+</div>
+<div *ngIf="checkProducts()" class="no-items">
+    No Deleted Products Found
+</div>

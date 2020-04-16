@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col">
+        <h3 style="float: left;">Home</h3>
+        <input class='search' type="text" placeholder="search" (keyup)="searchProduct($event)">
+    </div>
+
+</div>
+<div class="row">
+    <ng-container *ngFor="let product of products; let i = index;">
+        <div class="col product-card" *ngIf="!product.isDeleted">
+            <span class='header'>{{product.title}}</span>
+            <img src="https://picsum.photos/id/1{{i}}/300/300" alt=''>
+            <span class='footer'>
+                <button> Like </button>
+                <button (click)="removeProduct(product.id)" style="float: right;"> Remove </button>
+            </span>
+        </div>
+    </ng-container>
+</div>
+<div *ngIf="checkProducts()" class="no-items">
+    No Products
+</div>

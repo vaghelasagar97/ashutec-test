@@ -1,0 +1,19 @@
+.side-nav{
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3;
+    overflow-x: hidden;
+    padding-top: 60px;
+    border-right: 1px gray solid;
+}
+
+.side-nav a{
+    padding: 8px 8px 8px 20px;
+    text-decoration: none !important;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
