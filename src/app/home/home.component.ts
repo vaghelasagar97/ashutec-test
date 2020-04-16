@@ -24,6 +24,15 @@ export class HomeComponent implements OnInit {
     localStorage.setItem('products', JSON.stringify(this.products))
   }
 
+  likeProduct(id) {
+    this.products.forEach(p => {
+      if (p.id == id) {
+        p.isLiked = true
+      }
+    })
+    localStorage.setItem('products', JSON.stringify(this.products))
+  }
+
   searchProduct(event) {
     let list = JSON.parse(localStorage.getItem('products'));
     this.products = list.filter(e => {
